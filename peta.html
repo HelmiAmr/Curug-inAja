@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebGIS Curug Bandung</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="logo">
+                <img src="asset/curuginaja (2).png" alt="Logo Curug-inAja">
+                <div class="logo-text">
+                    <h1>Curug-inAja</h1>
+                    <p>WebGIS Wisata Curug Bandung dan Sekitarnya</p>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html"><i class="fas fa-home"></i> Beranda</a></li>
+                    <li><a href="peta.html" class="active"><i class="fas fa-map"></i> Peta Wisata</a></li>
+                    <li><a href="author.html"><i class="fas fa-info-circle"></i> Tentang</a></li>
+                    <li><a href="kontak.html"><i class="fas fa-envelope"></i> Kontak</a></li>
+                </ul>
+        </div>
+    </header>
+    
+    <div id="container">
+        <div id="sidebar">
+            <div class="control-panel">
+                <div class="search-box">
+                    <input type="text" id="search" placeholder="Cari curug...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filter-section">
+                    <div class="filter-group">
+                        <label for="category-filter">Kategori:</label>
+                        <select id="category-filter" class="filter-select">
+                            <!-- Options akan diisi oleh JavaScript -->
+                        </select>
+                    </div>
+                </div>
+                
+                <div class="sort-options">
+                    <label for="sort-by">Urutkan:</label>
+                    <select id="sort-by" class="filter-select">
+                        <option value="name-asc">Nama (A-Z)</option>
+                        <option value="name-desc">Nama (Z-A)</option>
+                        <option value="popularity">Popularitas</option>
+                        <option value="rating">Rating Tertinggi</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div id="beach-list-container">
+                <div id="beach-count">Menampilkan 0 dari 0 curug</div>
+                <div id="beach-list"></div>
+            </div>
+        </div>
+        
+        <div id="map-container">
+            <div id="map"></div>
+            <div id="map-controls">
+                <button id="locate-btn" title="Lokasi Saya"><i class="fas fa-location-arrow"></i></button>
+                <button id="zoom-in-btn" title="Zoom In"><i class="fas fa-plus"></i></button>
+                <button id="zoom-out-btn" title="Zoom Out"><i class="fas fa-minus"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Detail Curug</h2>
+            <div id="modal-content"></div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
