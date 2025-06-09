@@ -2282,20 +2282,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-// Data author yang lebih lengkap
-const authorData = {
-    name: "Ahmad Fauzi",
-    role: "Mahasiswa Teknik Geodesi",
-    university: "Universitas Gadjah Mada",
-    description: "Pengembang WebGIS ini merupakan proyek akhir mata kuliah Sistem Informasi Geografis. Dibangun dengan Leaflet.js dan teknologi web modern.",
-    photo: "https://i.imgur.com/yourphoto.jpg", // Ganti dengan URL foto Anda
-    social: {
-        github: "https://github.com/yourusername",
-        linkedin: "https://linkedin.com/in/yourprofile",
-        portfolio: "https://yourportfolio.com",
-        email: "mailto:ahmad.fauzi@example.com"
-    }
-};
+
 
 // Fungsi untuk render author section
 function renderAuthorSection() {
